@@ -242,6 +242,7 @@ char ncs_get_ch(Screen_t *s, int x, int y)
 
 int ncs_rm_current_line(Screen_t *s)
 {
+	wmove(s->wd, s->r_y, 0);
 	wclrtoeol(s->wd);
 
 	return 0;
